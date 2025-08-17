@@ -1,0 +1,32 @@
+WRITE A SCRIPT THAT MODIFIES THE SETTINGS.XML OR .JSON FILE SO THE PROGRAM’S UI HAS SPECIFIC DIMENSIONS. EXTRA: ALSO MODIFY BUTTONS AND OTHER VISUAL/STYLING ELEMENTS.
+
+Start with a simpler XML file to learn how to find something and write to the file.
+
+TO DO LIST
+
+- Learn how to open an XML file
+- Parse the document
+- Run queries
+
+Tags concerning UI Sizes:
+    <LayoutSizes> - tem três medidas porque temos três linhas na UI.
+    <ListViewNumberWidth>43</ListViewNumberWidth>
+    <ListViewStartWidth>98</ListViewStartWidth>
+    <ListViewEndWidth>82</ListViewEndWidth>
+    <ListViewDurationWidth>47</ListViewDurationWidth>
+    <ListViewCpsWidth>70</ListViewCpsWidth>
+    <ListViewWpmWidth>0</ListViewWpmWidth>
+    <ListViewGapWidth>47</ListViewGapWidth>
+    <ListViewActorWidth>0</ListViewActorWidth>
+    <ListViewRegionWidth>0</ListViewRegionWidth>
+    <ListViewTextWidth>438</ListViewTextWidth>
+    <ListViewNumberDisplayIndex>0</ListViewNumberDisplayIndex>
+    <ListViewStartDisplayIndex>1</ListViewStartDisplayIndex>
+    <ListViewEndDisplayIndex>2</ListViewEndDisplayIndex>
+    <ListViewDurationDisplayIndex>3</ListViewDurationDisplayIndex>
+    <ListViewCpsDisplayIndex>4</ListViewCpsDisplayIndex>
+    <ListViewWpmDisplayIndex>-1</ListViewWpmDisplayIndex>
+    <ListViewGapDisplayIndex>5</ListViewGapDisplayIndex>
+    <ListViewActorDisplayIndex>-1</ListViewActorDisplayIndex>
+    <ListViewRegionDisplayIndex>-1</ListViewRegionDisplayIndex>
+    <ListViewTextDisplayIndex>6</ListViewTextDisplayIndex>
