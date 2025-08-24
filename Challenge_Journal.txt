@@ -1,15 +1,23 @@
-WRITE A SCRIPT THAT MODIFIES THE SETTINGS.XML OR .JSON FILE SO THE PROGRAM’S UI HAS SPECIFIC DIMENSIONS. EXTRA: ALSO MODIFY BUTTONS AND OTHER VISUAL/STYLING ELEMENTS.
+WRITE A SCRIPT THAT MODIFIES THE SETTINGS.XML OR .JSON FILE SO THE PROGRAM’S UI HAS SPECIFIC DIMENSIONS.
+EXTRA: ALSO MODIFY BUTTONS AND OTHER VISUAL/STYLING ELEMENTS.
 
 Start with a simpler XML file to learn how to find something and write to the file.
 
 TO DO LIST
 
+Weak 1
 - Learn how to open an XML file
 - Parse the document
 - Run queries
 
+Weak 2
+- Create a dictionary of tags and Sizes
+- Iterate through the dictionary
+- Search in the XML for a tag equal to the key
+- Rewrite in the XML, substitute the dictionary value for the tag’s text
+
 Tags concerning UI Sizes:
-    <LayoutSizes> - tem três medidas porque temos três linhas na UI.
+    <LayoutSizes> 483,374,849- tem três medidas porque temos três linhas na UI.
     <ListViewNumberWidth>43</ListViewNumberWidth>
     <ListViewStartWidth>98</ListViewStartWidth>
     <ListViewEndWidth>82</ListViewEndWidth>
