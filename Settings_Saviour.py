@@ -7,8 +7,14 @@ import time
 
 #PARSE THE XML FILE
 
-tree=ET.parse('Settings.xml')
-root=tree.getroot()
+try:
+    tree=ET.parse('Settings.xml')
+    root=tree.getroot()
+
+except:
+    print('File not found.')
+    time.sleep(4)
+    exit()
 
 #USE A DICTIONARY TO FIND THE SELECTED TAGS AND REWRITE ALL THEIR CORRESPONDING VALUES
 
@@ -42,3 +48,5 @@ for key, value in TagRewrite.items():
 
 #SAVE THE MODIFIED FILE
 tree.write('Settings.xml')
+
+print('Reset successful.')
