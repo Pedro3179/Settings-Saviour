@@ -1,5 +1,6 @@
-WRITE A SCRIPT THAT MODIFIES THE SETTINGS.XML OR .JSON FILE SO THE PROGRAM’S UI HAS SPECIFIC DIMENSIONS.
-EXTRA: ALSO MODIFY BUTTONS AND OTHER VISUAL/STYLING ELEMENTS.
+WRITE A SCRIPT THAT MODIFIES THE SETTINGS.XML OR .JSON FILE SO THE PROGRAM’S UI HAS SPECIFIC DIMENSIONS, SHOW TOOLBAR BUTTONS, GRAPHIC BUTTON THEMES, DARK MODE, SUBTITLE POSITION ON THE SCREEN AND OTHER VISUAL/STYLING ELEMENTS.
+
+FEAUTURE: ASK WETHER THE USER WANTS DARK THEME OR LEGACY AND IMPLEMENT THE CHANGES
 
 Start with a simpler XML file to learn how to find something and write to the file.
 
@@ -15,6 +16,23 @@ Weak 2
 - Iterate through the dictionary
 - Search in the XML for a tag equal to the key
 - Rewrite in the XML, substitute the dictionary value for the tag’s text
+
+Weak 3
+- Print a dump
+- Modify the Layout profile
+- Find the following tags:
+    GRAPHIC BUTTON THEMES
+    DARK MODE
+    SUBTITLE POSITION ON THE SCREEN
+    SHOW TOOLBAR BUTTONS
+
+--------
+Rascunho
+--------
+
+TRY AND EXCEPT CASO ELE NÃO ACHE O ARQUIVO SETTINGS.XML EXIBIR ERROR
+
+
 
 Tags concerning UI Sizes:
     <LayoutSizes> 483,374,849- tem três medidas porque temos três linhas na UI.
@@ -38,3 +56,7 @@ Tags concerning UI Sizes:
     <ListViewActorDisplayIndex>-1</ListViewActorDisplayIndex>
     <ListViewRegionDisplayIndex>-1</ListViewRegionDisplayIndex>
     <ListViewTextDisplayIndex>6</ListViewTextDisplayIndex>
+
+----NEW-----
+<LayoutNumber>0</LayoutNumber>
+<ToolbarIconTheme>Legacy</ToolbarIconTheme>

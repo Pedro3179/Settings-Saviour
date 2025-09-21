@@ -3,6 +3,7 @@
 
 
 import xml.etree.ElementTree as ET
+import time
 
 #PARSE THE XML FILE
 
@@ -11,7 +12,9 @@ root=tree.getroot()
 
 #USE A DICTIONARY TO FIND THE SELECTED TAGS AND REWRITE ALL THEIR CORRESPONDING VALUES
 
+
 TagRewrite = {'LayoutSizes':'483,374,849',
+              'LayoutNumber':'0',
               'ListViewNumberWidth':'43',
               'ListViewStartWidth':'98',
               'ListViewEndWidth':'82',
@@ -34,8 +37,8 @@ TagRewrite = {'LayoutSizes':'483,374,849',
               'ListViewTextDisplayIndex':'6'}
 
 for key, value in TagRewrite.items():
-    layoutval=root.find('General/'+key) 
-    layoutval.text=value
+    layout_val=root.find('General/'+key)
+    layout_val.text=value
 
 #SAVE THE MODIFIED FILE
 tree.write('Settings.xml')
