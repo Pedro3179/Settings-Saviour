@@ -1,5 +1,5 @@
-#WRITE A SCRIPT THAT MODIFIES THE SETTINGS.XML OR .JSON FILE
-# SO THE PROGRAM’S UI HAS SPECIFIC DIMENSIONS.
+# WRITE A SCRIPT THAT RESTAURES THE UI BACK TO THE LEGACY TOOLBAR
+# AND SPECIFIC UI DIMENSIONS AFTER AN UPDATE
 
 
 import xml.etree.ElementTree as ET
@@ -40,13 +40,24 @@ TagRewrite = {'LayoutSizes':'483,374,849',
               'ListViewGapDisplayIndex':'5',
               'ListViewActorDisplayIndex':'-1',
               'ListViewRegionDisplayIndex':'-1',
-              'ListViewTextDisplayIndex':'6'}
+              'ListViewTextDisplayIndex':'6',
+              'ToolbarIconTheme':'Legacy'
+              }
+changes=[]
 
 for key, value in TagRewrite.items():
     layout_val=root.find('General/'+key)
-    layout_val.text=value
+    if layout_val is not None:
+        old_value=layout_val.text
+        layout_val.text=value
+        changes.append(f'{key}: {old_value} -> {value}')
 
 #SAVE THE MODIFIED FILE
 tree.write('Settings.xml')
 
-print('Reset successful.')
+print('The following changes were applied:\n')
+for change in changes:
+    print(" - "+change)
+
+print('\nSettings have been successfully restored to legacy toolbar and default UI dimensions.')
+print('You may need to restart the application for changes to take effect.\n')
